@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Success!</h1>
+<p>You're {{ name }} and like the following sports:</p>
+<ul>
+    {% for sport in sports %}
+        <li>{{ sport }}</li>
+    {% endfor %}
+</ul>
+<p>You have registered successfully :)</p>
+{% endblock %}

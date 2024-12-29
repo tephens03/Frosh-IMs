@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Success!</h1>
+<p>These are the registants!</p>
+<ul>
+    {% for user in registants.keys() %}
+        <li>{{user}}</li>
+    {% endfor %}
+</ul>
+<p>Have fun :)</p>
+{% endblock %}
