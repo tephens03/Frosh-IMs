@@ -2,11 +2,22 @@
 
 {% block body %}
 <h1>Success!</h1>
-<p>These are the registants!</p>
-<ul>
-    {% for user in registants.keys() %}
-        <li>{{user}}</li>
-    {% endfor %}
-</ul>
+<p>These are the registrants:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Sports</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user, sports in registants.items() %}
+        <tr>
+            <td>{{ user }}</td>
+            <td>{{ ', '.join(sports) }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 <p>Have fun :)</p>
 {% endblock %}
